@@ -30,10 +30,8 @@ function createSrcURL(evt){
 
 function setVideoSrc(src){
   var video = document.getElementById("dynamicVideo");
-  // video.defaultMuted = "true";
   video.src = src;
   video.controls = "true";
   video.seeking = "true";
-  video.loop = "false";
   video.play();
 }
