@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SJLI-VLJ Mobile remix</title>
+  <link rel="stylesheet" href="styles.css">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts.js" /></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <form id="dynamicForm">
+      <label for="number">Lesson Number</label>
+      <input id="number" type="text" name="number" value="" required />
+
+      <label for="example">Selection Type</label>
+      <select id="example" name="example" required>
+        <option value="i">Lesson Video</option>
+        <option value="s">Scenes</option>
+      </select>
+      <button>Load Video</button>
+    </form>
+    <div id="videoContainer" style="--aspect-ratio: 16/9;">
+      <video src="" id="dynamicVideo" frameborder="0"></video>
+    </div>
+    <div class="control-links">
+      <a id="p_cancel" href="#">Cancel</a>
+      <a id="p_complete" href="#">Send complete</a>
+    </div>
+
+    <!-- http://deli3.study.jp/ -->
+    <!--
+    <iframe src="http://deli3.study.jp/form.aspx" width="100%" height="400">
+
+      <form id="login" class="login_base cFix" action="http://deli3.study.jp/form.aspx" method="POST">
+        <div class="login_inner">
+          <div class="login_title">
+              Login
+          </div>
+          <div class="login_caption">
+              User ID
+          </div>
+
+          <input name="ctl00$masterMain$txtUserID" type="text" value="VLJ-sng11667" id="ctl00_masterMain_txtUserID" tabindex="1" autocorrect="off" autocapitalize="off">
+
+          <div class="login_caption">
+              Password
+          </div>
+
+          <input name="ctl00$masterMain$txtPassword" type="password" id="ctl00_masterMain_txtPassword" tabindex="4" autocorrect="off" autocapitalize="off">
+
+          <div class="login_alert">
+              <span id="ctl00_masterMain_lblErrorMessage"></span>
+          </div>
+
+          <div class="login_save">
+              <input id="ctl00_masterMain_chkSaveID" type="checkbox" name="ctl00$masterMain$chkSaveID" checked="checked"><label for="ctl00_masterMain_chkSaveID">Remember me</label>
+          </div>
+
+          <div class="login_btn">
+              <input type="hidden" name="ctl00$masterMain$hidValidate" id="ctl00_masterMain_hidValidate">
+              <input type="image" name="ctl00$masterMain$btnSubmit" id="ctl00_masterMain_btnSubmit" src="_images/login/login_button.png">
+          </div>
+          <button>type="submit">GO</button>
+      </form>
+      <div class="login_remind">
+          <a id="ctl00_masterMain_hplRemind" href="javascript:kdbox.open('/home/remind/_sub/remind.aspx');">ユーザID/パスワードを忘れてしまった方はこちら</a>
+      </div>
+    </iframe>
+     -->
+  </div>
+</body>
+</html>
+
