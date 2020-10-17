@@ -80,3 +80,15 @@ table {
   display: block;
   padding: 10px;
 }
+
+#dynamicForm {
+  padding: 20px;
+}
+#dynamicForm button {
+  margin-left: 40px;
+}
+
+body {
+  background: rgb(255,231,195);
+background: linear-gradient(0deg, rgba(255,231,195,1) 0%, rgba(152,176,56,1) 46%);
+}
