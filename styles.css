@@ -52,6 +52,19 @@ table {
 * {
   box-sizing: border-box;
 }
+body {
+  background: rgb(255,255,255);
+  background: linear-gradient(167deg, rgba(255,255,255,1) 44%, rgba(190,190,190,1) 100%);
+}
+body.main-lesson {
+  background: rgb(255,255,255);
+  background: linear-gradient(167deg, rgba(255,255,255,1) 44%, rgba(145,193,114,1) 100%);
+}
+body.scene-lesson {
+  background: rgb(255,255,255);
+  background: linear-gradient(167deg, rgba(255,255,255,1) 44%, rgba(193,114,114,1) 100%);
+}
+
 .media-item {
   width: 100%;
 }

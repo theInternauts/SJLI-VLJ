@@ -18,13 +18,15 @@ function handleSubmit(evt) {
   window.evt = evt;
   let url = createSrcURL(evt);
   setVideoSrc(url);
+  var sceneType = evt.srcElement.querySelectorAll("select#example")[0].value;
+  setBGDColor(sceneType);
 }
 
 function createSrcURL(evt){
   var form = evt.srcElement;
-  var snippet = "ENG_" + form.querySelectorAll("input[name='number']")[0].value;
-  var snippet_scene = "_" + form.querySelectorAll("select#example")[0].value;
-  var url = "https://dkjplpdstudyjp.akamaized.net/" + snippet + snippet_scene + ".mp4";
+  var videoLetter = form.querySelectorAll("input[name='number']")[0].value;
+  var sceneType = form.querySelectorAll("select#example")[0].value;
+  var url = `https://dkjplpdstudyjp.akamaized.net/ENG_${videoLetter}_${sceneType}.mp4`;
   return url;
 }
 
@@ -34,4 +36,17 @@ function setVideoSrc(src){
   video.controls = "true";
   video.seeking = "true";
   video.play();
+}
+
+function setBGDColor(value){
+  if(value == "i"){
+    document.getElementsByTagName("body")[0].classList.remove("scene-lesson");
+    document.getElementsByTagName("body")[0].classList.add("main-lesson");
+  } else if(value == "s"){
+    document.getElementsByTagName("body")[0].classList.remove("main-lesson");
+    document.getElementsByTagName("body")[0].classList.add("scene-lesson");
+  } else {
+    document.getElementsByTagName("body")[0].classList.remove("scene-lesson");
+    document.getElementsByTagName("body")[0].classList.remove("main-lesson");
+  }
 }
