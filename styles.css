@@ -49,8 +49,46 @@ table {
 
 /********************************* app styles *******************************/
 
+* {
+  box-sizing: border-box;
+}
+.media-item {
+  width: 100%;
+}
+.vid-links a,
+.control-links a {
+  display: block;
+  padding: 10px;
+}
+
+#dynamicForm {
+  padding: 20px;
+}
+#dynamicForm button {
+  margin-left: 40px;
+}
+
+@media only screen and (min-width: 800px) {
+  .flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: calc(100vh - 66px);
+  }
+  .flex-item {
+    flex: 100%;
+  }
+  .media-container {
+    text-align: center;
+  }
+  .media-item {
+    height: 100%;
+  }
+}
+
 /* based on https://css-tricks.com/responsive-iframes/ */
-[style*="--aspect-ratio"] > :first-child {
+/*[style*="--aspect-ratio"] > :first-child {
   width: 100%;
 }
 [style*="--aspect-ratio"] > video,
@@ -73,17 +111,4 @@ table {
     left: 0;
     height: 100%;
   }
-}
-
-.vid-links a,
-.control-links a {
-  display: block;
-  padding: 10px;
-}
-
-#dynamicForm {
-  padding: 20px;
-}
-#dynamicForm button {
-  margin-left: 40px;
-}
+}*/
