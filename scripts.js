@@ -18,7 +18,6 @@ function fn() {
 
 function handleSubmit(evt) {
   evt.preventDefault();
-  window.evt = evt;
   let url = createSrcURL(evt);
   setVideoSrc(url);
   var sceneType = evt.srcElement.querySelectorAll("select#example")[0].value;
@@ -56,7 +55,6 @@ function setBGDColor(value){
 
 function handleSearchSubmit(evt){
   evt.preventDefault();
-  window.evt = evt;
   let url = createSearchUrl(evt);
   console.log(url);
   setSearchUrl(url);
