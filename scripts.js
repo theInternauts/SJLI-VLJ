@@ -11,6 +11,9 @@ function ready(fn) {
 function fn() {
   const form = document.getElementById('dynamicForm');
   form.addEventListener('submit', handleSubmit);
+
+  const searchForm = document.getElementById('jishoSearchForm');
+  searchForm.addEventListener('submit', handleSearchSubmit);
 }
 
 function handleSubmit(evt) {
@@ -49,4 +52,24 @@ function setBGDColor(value){
     document.getElementsByTagName("body")[0].classList.remove("scene-lesson");
     document.getElementsByTagName("body")[0].classList.remove("main-lesson");
   }
+}
+
+function handleSearchSubmit(evt){
+  evt.preventDefault();
+  window.evt = evt;
+  let url = createSearchUrl(evt);
+  console.log(url);
+  setSearchUrl(url);
+}
+
+function createSearchUrl(evt){
+  var searchForm = evt.srcElement;
+  var searchTerm = searchForm.querySelectorAll("input[name='search_term']")[0].value;
+  var url = `https://jisho.org/search/${searchTerm}`;
+  return url;
+}
+
+function setSearchUrl(src){
+  var iframe = document.getElementById("jishoSearchWindow");
+  iframe.src = src;
 }
